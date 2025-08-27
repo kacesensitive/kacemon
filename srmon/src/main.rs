@@ -12,7 +12,7 @@ fn main() {
 fn run() -> anyhow::Result<()> {
     // Parse command line arguments
     let matches = Command::new("kacemon")
-        .version("0.2.0")
+        .version("0.3.0")
         .about("System Resource Monitor - A cross-platform TUI system monitor")
         .arg(
             Arg::new("refresh")

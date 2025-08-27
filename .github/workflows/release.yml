@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 env:
   CARGO_TERM_COLOR: always
@@ -79,28 +79,28 @@ jobs:
           name: "kacemon ${{ github.ref_name }}"
           body: |
             ## 🚀 kacemon ${{ github.ref_name }}
-            
+
             A cross-platform system resource monitor with a beautiful terminal interface.
-            
+
             ### 📦 Installation
-            
+
             Download the appropriate binary for your platform below, extract it, and place it in your PATH.
-            
+
             Alternatively, install via Cargo:
             ```bash
             cargo install kacemon
             ```
-            
+
             ### 🔧 Usage
-            
+
             ```bash
             kacemon                    # Run with default settings
             kacemon --refresh 1000     # Custom refresh rate
             kacemon --theme light      # Light theme
             ```
-            
+
             ### 🎯 Features
-            
+
             - Real-time system monitoring (CPU, memory, network, temperature)
             - Beautiful terminal interface
             - Network activity visualization
