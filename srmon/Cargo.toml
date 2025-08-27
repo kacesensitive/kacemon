@@ -1,0 +1,26 @@
+[package]
+name = "kacemon"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "System Resource Monitor - A cross-platform TUI system monitor"
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+kacemon-core = { path = "../crates/core" }
+kacemon-tui = { path = "../crates/tui" }
+clap.workspace = true
+anyhow.workspace = true
+
+[features]
+default = []
+linux_procfs = ["kacemon-core/linux_procfs"]
+
+[[bin]]
+name = "kacemon"
+path = "src/main.rs"

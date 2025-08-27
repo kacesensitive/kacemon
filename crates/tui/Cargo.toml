@@ -1,0 +1,11 @@
+[package]
+name = "kacemon-tui"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+kacemon-core = { path = "../core" }
+crossterm.workspace = true
+anyhow.workspace = true
+serde.workspace = true

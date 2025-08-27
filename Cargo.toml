@@ -1,0 +1,40 @@
+[workspace]
+members = ["crates/core", "crates/tui", "srmon"]
+resolver = "2"
+
+[workspace.package]
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.77"
+license = "MIT"
+authors = ["kacesensitive"]
+description = "A cross-platform system resource monitor with a beautiful TUI"
+homepage = "https://github.com/kacesensitive/kacemon"
+repository = "https://github.com/kacesensitive/kacemon"
+documentation = "https://docs.rs/kacemon"
+readme = "README.md"
+keywords = ["system", "monitor", "tui", "htop", "performance"]
+categories = ["command-line-utilities", "system-tools"]
+
+[workspace.dependencies]
+# Core dependencies
+sysinfo = "0.30"
+anyhow = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.0", features = ["derive", "env"] }
+
+# TUI dependencies
+crossterm = "0.27"
+
+# Platform-specific (Linux only)
+procfs = "0.16"
+
+
+
+# Additional dependencies for main binary
+kacemon-core = { path = "crates/core" }
+kacemon-tui = { path = "crates/tui" }
+
+# Features are handled by individual crates

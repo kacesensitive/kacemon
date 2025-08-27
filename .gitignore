@@ -1,0 +1,45 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Runtime
+*.pid
+*.seed
+
+# Coverage reports
+*.profraw
+cobertura.xml
+lcov.info
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local configuration
+/config.json
+/.env
+/.env.local
+
+# Build artifacts
+/dist/
+/pkg/
